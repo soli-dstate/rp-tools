@@ -4,6 +4,8 @@ import threading
 import sys
 import traceback
 
+version = "1.0.0"
+
 folders = ['./saves', './modules', './logs']
 for folder in folders:
     if not os.path.exists(folder):
