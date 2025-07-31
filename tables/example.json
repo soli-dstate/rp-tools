@@ -1,0 +1,84 @@
+{
+    "displayName": "example table",
+    "UUID": "cdcf4820-7636-42e0-b822-4a6dddcadc73",
+    "description": "This is an example table for demonstration purposes.",
+    "rarities": [
+        {
+            "name": "common",
+            "weight": 60
+        },
+        {
+            "name": "uncommon",
+            "weight": 25
+        },
+        {
+            "name": "rare",
+            "weight": 10
+        },
+        {
+            "name": "legendary",
+            "weight": 4
+        },
+        {
+            "name": "mythic",
+            "weight": 1
+        }
+    ],
+    "content": [
+        {
+            "name": "item #1",
+            "value": 10,
+            "description": "Example description",
+            "rarity": "common",
+            "minrand": 1,
+            "maxrand": 1,
+            "inventoryslots": 1,
+            "id": 0,
+            "tableuuid": "cdcf4820-7636-42e0-b822-4a6dddcadc73"
+        },
+        {
+            "name": "item #2",
+            "value": 20,
+            "description": "Another example description",
+            "rarity": "uncommon",
+            "minrand": 1,
+            "maxrand": 1,
+            "inventoryslots": 1,
+            "id": 1,
+            "tableuuid": "cdcf4820-7636-42e0-b822-4a6dddcadc73"
+        },
+        {
+            "name": "item #3",
+            "value": 30,
+            "description": "Yet another example description",
+            "rarity": "rare",
+            "minrand": 1,
+            "maxrand": 1,
+            "inventoryslots": 1,
+            "id": 2,
+            "tableuuid": "cdcf4820-7636-42e0-b822-4a6dddcadc73"
+        },
+        {
+            "name": "item #4",
+            "value": 40,
+            "description": "A rare item description",
+            "rarity": "legendary",
+            "minrand": 1,
+            "maxrand": 1,
+            "inventoryslots": 1,
+            "id": 3,
+            "tableuuid": "cdcf4820-7636-42e0-b822-4a6dddcadc73"
+        },
+        {
+            "name": "item #5",
+            "value": 50,
+            "description": "An extremely rare item description",
+            "rarity": "mythic",
+            "minrand": 1,
+            "maxrand": 1,
+            "inventoryslots": 1,
+            "id": 4,
+            "tableuuid": "cdcf4820-7636-42e0-b822-4a6dddcadc73"
+        }
+    ]
+}
