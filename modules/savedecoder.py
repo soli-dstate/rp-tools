@@ -2,15 +2,11 @@ import os
 import base64
 import json
 import logging
-<<<<<<< HEAD
 import sys
-=======
->>>>>>> 0db95dc347189bcc6670fb94e04fd585104bee83
 
 version = "1.0.0"
 displayname = "Save Decoder"
 
-<<<<<<< HEAD
 requirements = [""]
 
 logger = logging.getLogger(__name__)
@@ -24,10 +20,6 @@ for req in requirements:
         logger.error(f"required module {req} not found in {modules_dir}. please ensure it is installed.")
         break
 
-=======
-logger = logging.getLogger(__name__)
-
->>>>>>> 0db95dc347189bcc6670fb94e04fd585104bee83
 saves_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'saves'))
 if not os.path.exists(saves_dir):
     logger.info(f"creating saves directory at {saves_dir}")
@@ -36,17 +28,10 @@ if not os.path.exists(saves_dir):
 def decode_save_file(filename):
     logger.info(f"running decode_save_file with filename: {filename}")
     save_path = os.path.join(saves_dir, filename)
-<<<<<<< HEAD
     if not filename.endswith('.lsfv'):
         logger.error("input file did not have the .lsfv extension")
         raise ValueError("Input file must have a .lsfv extension.")
     json_filename = filename.replace('.lsfv', '.json')
-=======
-    if not filename.endswith('.save'):
-        logger.error("input file did not have the .save extension")
-        raise ValueError("Input file must have a .save extension.")
-    json_filename = filename.replace('.save', '.json')
->>>>>>> 0db95dc347189bcc6670fb94e04fd585104bee83
     py_path = os.path.join(saves_dir, json_filename)
     with open(save_path, "rb") as f:
         encoded = f.read()
@@ -72,11 +57,7 @@ def encode_save_file(json_filename):
     if not json_filename.endswith('.json'):
         logger.error("input file did not have the .json extension")
         raise ValueError("Input file must have a .json extension.")
-<<<<<<< HEAD
     save_filename = json_filename.replace('.json', '.lsfv')
-=======
-    save_filename = json_filename.replace('.json', '.save')
->>>>>>> 0db95dc347189bcc6670fb94e04fd585104bee83
     save_path = os.path.join(saves_dir, save_filename)
     with open(py_path, "r", encoding="utf-8") as f:
         content = f.read()
@@ -93,36 +74,20 @@ def encode_save_file(json_filename):
     return save_path
 
 def list_save_files():
-<<<<<<< HEAD
     return [f for f in os.listdir(saves_dir) if f.endswith('.lsfv')]
 
 def primary():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Available .lsfv files:")
-=======
-    return [f for f in os.listdir(saves_dir) if f.endswith('.save')]
-
-def primary():
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print("Available .save files:")
->>>>>>> 0db95dc347189bcc6670fb94e04fd585104bee83
     save_files = list_save_files()
     for idx, fname in enumerate(save_files, 1):
         print(f"{idx}. {fname}")
     print("\nOptions:")
-<<<<<<< HEAD
     print("1. Decode a .lsfv file to .json")
     print("2. Encode a .json file to .lsfv")
     choice = input("Enter your choice (1/2): ").strip()
     if choice == "1":
         file_idx = int(input("Enter the number of the .lsfv file to decode: ").strip())
-=======
-    print("1. Decode a .save file to .json")
-    print("2. Encode a .json file to .save")
-    choice = input("Enter your choice (1/2): ").strip()
-    if choice == "1":
-        file_idx = int(input("Enter the number of the .save file to decode: ").strip())
->>>>>>> 0db95dc347189bcc6670fb94e04fd585104bee83
         if 1 <= file_idx <= len(save_files):
             py_path = decode_save_file(save_files[file_idx - 1])
             print(f"Decoded to {py_path}")
@@ -140,8 +105,4 @@ def primary():
         else:
             print("Invalid selection.")
     else:
-<<<<<<< HEAD
         print("Invalid choice.")
-=======
-        print("Invalid choice.")
->>>>>>> 0db95dc347189bcc6670fb94e04fd585104bee83
