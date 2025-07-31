@@ -8,7 +8,7 @@ import logging
 import random
 from bs4 import BeautifulSoup
 
-version = "1.0.0"
+version = "0.0.0"
 
 prerelease = False
 
